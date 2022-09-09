@@ -1,0 +1,10 @@
+.content {
+    width: 46rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: -webkit-fill-available;
+    }
+}
