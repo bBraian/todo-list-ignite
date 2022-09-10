@@ -11,12 +11,21 @@
     margin-top: 0.75rem;
 }
 
-.taskBox span {
+.text {
     margin: 0 0.75rem;
     color: var(--gray-100);
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.225rem;
+}
+
+.textDone {
+    margin: 0 0.75rem;
+    color: var(--gray-300);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.225rem;
+    text-decoration: line-through;
 }
 
 

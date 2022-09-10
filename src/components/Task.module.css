@@ -8,3 +8,16 @@
         width: -webkit-fill-available;
     }
 }
+
+.taskList {
+    width: 46rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .taskList {
+        width: -webkit-fill-available
+    }
+}
