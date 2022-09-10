@@ -4,9 +4,7 @@ import { Info } from './Info';
 import styles from './Task.module.css';
 import { TaskItem } from './TaskItem';
 
-export function Task({tasks, setTasks}) {
-    const [createdTasks, setCreatedTasks] = useState(tasks.length);
-    const [doneTasks, setDoneTasks] = useState(0);
+export function Task({tasks, setTasks, createdTasks, setCreatedTasks, doneTasks, setDoneTasks}) {
 
     function handleUpdateChecked(id) {
         let newTask = tasks;
@@ -15,7 +13,6 @@ export function Task({tasks, setTasks}) {
                 task.check = task.check ? false : true;
             } 
         });
-        
         setTasks(newTask);
     }
 

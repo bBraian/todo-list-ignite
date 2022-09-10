@@ -5,6 +5,7 @@
     background: var(--gray-500);
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .taskBox + .taskBox {
@@ -17,6 +18,7 @@
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.225rem;
+    width: 100%;
 }
 
 .textDone {
@@ -26,6 +28,7 @@
     font-weight: 400;
     line-height: 1.225rem;
     text-decoration: line-through;
+    width: 100%;
 }
 
 

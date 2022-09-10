@@ -15,14 +15,21 @@ export function App() {
 
   const [tasks, setTasks] = useState(data);
   const [inputValue, setInputValue] = useState('');
+  const [createdTasks, setCreatedTasks] = useState(tasks.length);
+  const [doneTasks, setDoneTasks] = useState(0);
 
   function handleCreateNewTask() {
-    let taskId = Math.floor(Date.now() * Math.random()).toString(36);
-    let newTask = {id: taskId, check: false, text: inputValue}
-    setTasks([...tasks, newTask]);
-    setInputValue('');
-  }
+    if(inputValue !== '') {
+      let taskId = Math.floor(Date.now() * Math.random()).toString(36);
+      let newTask = {id: taskId, check: false, text: inputValue}
+      setTasks([...tasks, newTask]);
+      setInputValue('');
+      setCreatedTasks(createdTasks + 1)
+    } else {
+      alert('Preencha o texto da tarefa!');
+    }
 
+  }
 
   return (
     <div>
@@ -33,7 +40,14 @@ export function App() {
           inputValue={inputValue}
           setInputValue={setInputValue}
         />
-        <Task tasks={tasks} setTasks={setTasks} />
+        <Task 
+          tasks={tasks} 
+          setTasks={setTasks}
+          createdTasks={createdTasks}
+          setCreatedTasks={setCreatedTasks}
+          doneTasks={doneTasks}
+          setDoneTasks={setDoneTasks}
+        />
       </div>
     </div>
   )
